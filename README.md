@@ -1,7 +1,7 @@
 # A Laravel Nova tool for Spatie's laravel-permission library
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vyuldashev/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
-[![Total Downloads](https://img.shields.io/packagist/dt/vyuldashev/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/max26292/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
+[![Total Downloads](https://img.shields.io/packagist/dt/Max26292/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
 
 ![screenshot 1](https://raw.githubusercontent.com/vyuldashev/nova-permission/master/docs/user-resource.png)
 
@@ -26,7 +26,7 @@ public function tools()
 {
     return [
         // ...
-        \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
+        \Max26292\NovaPermission\NovaPermissionTool::make(),
     ];
 }
 ```
@@ -37,7 +37,7 @@ Next, add middleware to `config/nova.php`
 // in config/nova.php
 'middleware' => [
     // ...
-    \Vyuldashev\NovaPermission\ForgetCachedPermissions::class,
+    \Max26292\NovaPermission\ForgetCachedPermissions::class,
 ],
 ```
 
@@ -51,8 +51,8 @@ public function fields(Request $request)
 {
     return [
         // ...
-        MorphToMany::make('Roles', 'roles', \Vyuldashev\NovaPermission\Role::class),
-        MorphToMany::make('Permissions', 'permissions', \Vyuldashev\NovaPermission\Permission::class),
+        MorphToMany::make('Roles', 'roles', \Max26292\NovaPermission\Role::class),
+        MorphToMany::make('Permissions', 'permissions', \Max26292\NovaPermission\Permission::class),
     ];
 }
 ```
@@ -61,8 +61,8 @@ Or if you want to attach multiple permissions at once, use `RoleBooleanGroup` an
 
 ```php
 // ...
-use Vyuldashev\NovaPermission\PermissionBooleanGroup;
-use Vyuldashev\NovaPermission\RoleBooleanGroup;
+use max26292\NovaPermission\PermissionBooleanGroup;
+use max26292\NovaPermission\RoleBooleanGroup;
 
 public function fields(Request $request)
 {
@@ -78,8 +78,8 @@ If your `User` could have a single role at any given time, you can use `RoleSele
 
 ```php
 // ...
-use Vyuldashev\NovaPermission\PermissionBooleanGroup;
-use Vyuldashev\NovaPermission\RoleSelect;
+use Max26292\NovaPermission\PermissionBooleanGroup;
+use Max26292\NovaPermission\RoleSelect;
 
 public function fields(Request $request)
 {
@@ -103,7 +103,7 @@ public function tools()
 {
     return [
         // ...
-        \Vyuldashev\NovaPermission\NovaPermissionTool::make()
+        \Max26292\NovaPermission\NovaPermissionTool::make()
             ->roleResource(CustomRole::class)
             ->permissionResource(CustomPermission::class),
     ];
@@ -115,8 +115,8 @@ If you want to show your roles and policies with a custom label, you can set `$l
 
 ```php
 // ...
-use Vyuldashev\NovaPermission\PermissionBooleanGroup;
-use Vyuldashev\NovaPermission\RoleSelect;
+use max26292\NovaPermission\PermissionBooleanGroup;
+use max26292\NovaPermission\RoleSelect;
 
 public function fields(Request $request)
 {
@@ -141,7 +141,7 @@ public function tools()
 {
     return [
         // ...
-        \Vyuldashev\NovaPermission\NovaPermissionTool::make()
+        \Max26292\NovaPermission\NovaPermissionTool::make()
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
     ];
