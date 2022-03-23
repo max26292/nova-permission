@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/max26292/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
 [![Total Downloads](https://img.shields.io/packagist/dt/Max26292/nova-permission.svg?style=flat-square)](https://packagist.org/packages/max26292/nova-permission)
 
-![screenshot 1](https://raw.githubusercontent.com/vyuldashev/nova-permission/master/docs/user-resource.png)
+![screenshot 1](https://raw.githubusercontent.com/Max26292/nova-permission/master/docs/user-resource.png)
 
 ## Installation
 
@@ -154,5 +154,5 @@ public function tools()
 A new menu item called "Permissions & Roles" will appear in your Nova app after installing this package.
 
 ## Credit:
-This package is fork from https://github.com/vyuldashev/nova-permission
+This package is fork from https://github.com/Max26292/nova-permission
 

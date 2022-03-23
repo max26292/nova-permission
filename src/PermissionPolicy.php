@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vyuldashev\NovaPermission;
+namespace Max26292\NovaPermission;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 
