@@ -3,6 +3,7 @@
 namespace Max26292\NovaPermission;
 
 use Gate;
+use Illuminate\Http\Request;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
@@ -56,5 +57,9 @@ class NovaPermissionTool extends Tool
         $this->permissionPolicy = $permissionPolicy;
 
         return $this;
+    }
+
+    public function menu(Request $request){
+
     }
 }
