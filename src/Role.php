@@ -2,7 +2,7 @@
 
 namespace Max26292\NovaPermission;
 
-use Illuminate\Http\Request;
+use Laravel\Nova\Http\Requests\NovaRequest as Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\Rule;
 use Laravel\Nova\Fields\DateTime;
