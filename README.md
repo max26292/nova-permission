@@ -154,5 +154,5 @@ public function tools()
 A new menu item called "Permissions & Roles" will appear in your Nova app after installing this package.
 
 ## Credit:
-This package is fork from https://github.com/Max26292/nova-permission
+This package is fork from https://github.com/vyuldashev/nova-permission
 
