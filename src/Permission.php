@@ -86,7 +86,12 @@ class Permission extends Resource
         $guardOptions = collect(config('auth.guards'))->mapWithKeys(function ($value, $key) {
             return [$key => $key];
         });
-
+        $guards = array_keys(config('auth.guards'));
+        foreach($guards as $guard){
+            if(auth()->guard($guard)->check()){
+                $this->guard_name = $guard;
+            }
+        }
         $userResource = Nova::resourceForModel(getModelForGuard($this->guard_name));
 
         return [
